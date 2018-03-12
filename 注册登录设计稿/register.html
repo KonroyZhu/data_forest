@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>
+注册
+</title>
+<style>
+.main-content{
+	width:1920px;
+	height:934px;
+	
+	margin:auto;
+	background-image:url(image/bg.png);
+}
+.register-block{
+	width:340px;
+	height:310px;
+	/*border:1px solid #d1d1d1;*/
+	margin:auto;
+	position:relative;
+	top:430px;
+	
+}
+form{
+	margin:auto;
+	width:340px;
+	height:310px;
+	position:relative;
+	top:119px;
+}
+input{
+	border:0px;
+	background-color:transparent;
+	position:relative;
+	left:20px;
+	top:2px;
+	width:250px;
+	height:25px;
+	
+}
+::-webkit-input-placeholder { /* WebKit browsers */ 
+	color:#cecece; 
+	font-size:16px;
+	
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color:#cecece; 
+	font-size:16px; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color:#cecece; 
+	font-size:16px;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color:#cecece; 
+	font-size:16px;
+} 
+
+.icon{
+	position:relative;
+	left:10px;
+	top:5px;
+}
+hr{
+	
+	height:1px;
+	border:none;
+	border-top:1px solid #d1d1d1;
+}
+.input-row{
+	margin-top:20px;
+	margin-bottom:40px;
+}
+</style>
+</head>
+<body>
+<div class="main-content">
+<div class="register-block">
+</div><!--register-block-->
+<form method="post" >
+	<div class="input-row">
+    	<img class="icon" src="image/email.png"/>
+        <input id="email"type="email" name="emial" placeholder="请输入邮箱"/>
+        <hr/>
+    </div>
+    <div class="input-row">
+    	<img class="icon" src="image/pass.png"/>
+        <input id="pass1"type="password" name="pass" placeholder="请输入密码"/>
+        <hr/>
+    </div>
+    <div class="input-row">
+    	<img class="icon" src="image/pass.png"/>
+        <input id="pass2"type="password"  placeholder="请再次输入密码"/>
+        <hr/>
+    </div>
+	
+    <input id="submit" type="submit" style="width:240px;height:60px;background-image:url(image/button3.png);position:relative;left:50px;top:-10px;outline:none" value=""/>
+</form>
+</div><!--main-content-->
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#submit").click(function(){
+		if($("#email").val()==""||$("#pass1").val()==""||$("#pass2").val()==""){
+			alert("请完整填写信息");
+			return false;
+		}else if($("#pass1").val()!=$("#pass2").val()){
+			alert("两次输入的密码不一致");
+			return false;
+		}else{
+			return true;
+		}
+	});
+});
+</script>
+</body>
+</html>

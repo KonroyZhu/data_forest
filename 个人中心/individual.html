@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>个人中心</title>
+</head>
+<link href="css/individual.css" rel="stylesheet" type="text/css" />
+<body>
+
+<div id="header">
+        <img src="image/logo.png" id="logo">
+        <ul id="menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="community.html">共享社区</a></li>
+            <li><a href="customization.html">个性定制</a></li>
+            <li><a href=" ">猎人报告</a></li>
+            <li><a href="aboutus.html">关于猎人</a></li>
+        </ul>
+        <ul id="login" >
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+        </ul>
+</div><!--header-->
+<div class="main-content">
+<span class="col1">
+<div class="avatar" style="background-image:url(image/avatar.png);background-repeat:no-repeat;background-position:center;" >
+</div>
+</span><!--col1-->
+
+
+<span class="col2">
+<form method="post" >
+<div class="input-row">
+<p>昵称</p>
+<input type="text" name="nickname"/>
+</div>
+
+<div class="input-row">
+<p>学校</p>
+<input type="text" name="school"/>
+</div>
+
+<div class="input-row">
+<p>专业</p>
+<input type="text" name="major"/>
+</div>
+
+<div class="input-row">
+<p>手机号码</p>
+<input type="tel" name="phone"/>
+</div>
+<div class="input-row" style="height:200px;">
+<p>个性签名称</p>
+<input  style="height:130px;" type="text" name="sign"/>
+</div>
+<div class="input-row">
+<p>新密码</p>
+<input type="password" name="newpass"/>
+</div>
+<div class="input-row">
+<p>新密码确认</p>
+<input type="password" />
+</div>
+<input id="submit" type="submit" value=""/>
+</form>
+
+</span><!--col2-->
+
+
+
+<span class="col3">
+<div class="interested">
+<p>感兴趣领域</p>
+<div class="blueLab">大数据</div>
+
+</div><!--interested-->
+<div class="moreLab">
+<p>感兴趣领域</p>
+<div id="gray1" class="grayLab">大数据</div>
+<div id="gray2" class="grayLab">数大数据</div>
+<div id="gray3" class="grayLab">大大数据</div>
+<div id="gray4" class="grayLab">据</div>
+<div id="gray5" class="grayLab">数大据</div>
+<div id="gray6" class="grayLab">据大数</div>
+</div><!--moreLab-->
+<div class="addLabel">
+</div><!--addLabel-->
+
+</span><!--col3-->
+</div><!--main-content-->
+<div class="bottom">
+</div><!--bottom-->
+
+
+</body>
+<script>
+var gray=document.getElementById("gray3");
+gray.onclick=function(){
+	alert(this.innerHTML);
+}
+</script>
+</html>
